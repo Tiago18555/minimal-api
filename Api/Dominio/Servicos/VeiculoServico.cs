@@ -9,10 +9,7 @@ namespace MinimalApi.Dominio.Servicos;
 public class VeiculoServico : IVeiculoServico
 {
     private readonly DbContexto _contexto;
-    public VeiculoServico(DbContexto contexto)
-    {
-        _contexto = contexto;
-    }
+    public VeiculoServico(DbContexto contexto) => _contexto = contexto;
 
     public void Apagar(Veiculo veiculo)
     {
@@ -26,10 +23,7 @@ public class VeiculoServico : IVeiculoServico
         _contexto.SaveChanges();
     }
 
-    public Veiculo? BuscaPorId(int id)
-    {
-        return _contexto.Veiculos.Where(v => v.Id == id).FirstOrDefault();
-    }
+    public Veiculo? BuscaPorId(int id) => _contexto.Veiculos.Where(v => v.Id == id).FirstOrDefault();
 
     public void Incluir(Veiculo veiculo)
     {

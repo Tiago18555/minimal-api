@@ -8,15 +8,11 @@ namespace MinimalApi.Dominio.Servicos;
 public class AdministradorServico : IAdministradorServico
 {
     private readonly DbContexto _contexto;
-    public AdministradorServico(DbContexto contexto)
-    {
-        _contexto = contexto;
-    }
+    public AdministradorServico(DbContexto contexto) => _contexto = contexto;
 
-    public Administrador? BuscaPorId(int id)
-    {
-        return _contexto.Administradores.Where(v => v.Id == id).FirstOrDefault();
-    }
+    public Administrador? BuscaPorId(int id) =>    
+        _contexto.Administradores.Where(v => v.Id == id).FirstOrDefault();
+    
 
     public Administrador Incluir(Administrador administrador)
     {

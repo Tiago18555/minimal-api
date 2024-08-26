@@ -21,10 +21,7 @@ public class AdministradorServicoMock : IAdministradorServico
         }
     };
 
-    public Administrador? BuscaPorId(int id)
-    {
-        return administradores.Find(a => a.Id == id);
-    }
+    public Administrador? BuscaPorId(int id) =>administradores.Find(a => a.Id == id);
 
     public Administrador Incluir(Administrador administrador)
     {
@@ -34,13 +31,7 @@ public class AdministradorServicoMock : IAdministradorServico
         return administrador;
     }
 
-    public Administrador? Login(LoginDTO loginDTO)
-    {
-        return administradores.Find(a => a.Email == loginDTO.Email && a.Senha == loginDTO.Senha);
-    }
+    public Administrador? Login(LoginDTO loginDTO) => administradores.Find(a => a.Email == loginDTO.Email && a.Senha == loginDTO.Senha);
 
-    public List<Administrador> Todos(int? pagina)
-    {
-        return administradores;
-    }
+    public List<Administrador> Todos(int? pagina) => administradores;
 }

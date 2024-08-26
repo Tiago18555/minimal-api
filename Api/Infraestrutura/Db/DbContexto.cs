@@ -6,10 +6,7 @@ namespace MinimalApi.Infraestrutura.Db;
 public class DbContexto : DbContext
 {
     private readonly IConfiguration _configuracaoAppSettings;
-    public DbContexto(IConfiguration configuracaoAppSettings)
-    {
-        _configuracaoAppSettings = configuracaoAppSettings;
-    }
+    public DbContexto(IConfiguration configuracaoAppSettings) =>_configuracaoAppSettings = configuracaoAppSettings;
 
     public DbSet<Administrador> Administradores { get; set; } = default!;
     public DbSet<Veiculo> Veiculos { get; set; } = default!;

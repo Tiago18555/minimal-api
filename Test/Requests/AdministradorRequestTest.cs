@@ -11,16 +11,10 @@ namespace Test.Requests;
 public class AdministradorRequestTest
 {
     [ClassInitialize]
-    public static void ClassInit(TestContext testContext)
-    {
-        Setup.ClassInit(testContext);
-    }
+    public static void ClassInit(TestContext testContext) => Setup.ClassInit(testContext);
 
     [ClassCleanup]
-    public static void ClassCleanup()
-    {
-        Setup.ClassCleanup();
-    }
+    public static void ClassCleanup() => Setup.ClassCleanup();
     
     [TestMethod]
     public async Task TestarGetSetPropriedades()
